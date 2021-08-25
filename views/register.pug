@@ -1,0 +1,206 @@
+doctype html
+html(lang='en')
+	head
+		title Login V3
+		meta(charset='UTF-8')
+		meta(name='viewport' content='width=device-width, initial-scale=1')
+		meta(name='title' content='Messenger')
+		meta(name='description' content='Developed By Nitish')
+		// Open Graph / Facebook
+		meta(property='og:type' content='website')
+		meta(property='og:url' content='https://app4messenger.herokuapp.com/chat')
+		meta(property='og:title' content='Messenger')
+		meta(property='og:description' content='Developed By Nitish')
+		meta(property='og:image' content='https://logos-world.net/wp-content/uploads/2021/02/Facebook-Messenger-Logo-700x394.png')
+		// Twitter
+		meta(property='twitter:card' content='summary_large_image')
+		meta(property='twitter:url' content='https://app4messenger.herokuapp.com/chat')
+		meta(property='twitter:title' content='Messenger')
+		meta(property='twitter:description' content='Developed By Nitish')
+		meta(property='twitter:image' content='https://logos-world.net/wp-content/uploads/2021/02/Facebook-Messenger-Logo-700x394.png')
+		
+		// ===============================================================================================
+		link(rel='icon' type='image/png' href='images/icons/favicon.ico')
+		link(rel='stylesheet' type='text/css' href='fonts/font-awesome-4.7.0/css/font-awesome.min.css')
+		link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1' crossorigin='anonymous')
+
+		script(src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous')
+		// ===============================================================================================
+		link(rel='stylesheet' type='text/css' href='fonts/iconic/css/material-design-iconic-font.min.css')
+		link(rel='stylesheet' type='text/css' href='css/util.css')
+		link(rel='stylesheet' type='text/css' href='css/main.css')
+		// ===============================================================================================
+	body
+		.limiter
+			.container-login100(style="background-image: url('images/bg-01.jpg');")
+				.wrap-login100
+					form.login100-form.validate-form(action= "/register", method= "post", class= "myForm")
+						//- if err!=undefined
+						//- .alert.alert-danger.alert-dismissible.fade.show(role='alert')
+						//- 	strong=err
+						//- 	button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
+						span.login100-form-logo
+							i.fas.fa-user(aria-hidden='true')
+						span.login100-form-title.p-b-34.p-t-27
+							| Sign up
+
+						if err!=undefined
+							.alert.alert-danger.alert-dismissible.fade.show(role='alert')
+								strong=err
+								button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
+						.wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+							input.myInput.input100(type='text' name='name' placeholder='Enter your name..' value= name=!undefined ? name : "")
+
+							span.symbol-input100span.focus-input100(data-placeholder='☺')
+          
+						.wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+							input.myInput.input100(type='phone' name='phone' placeholder='phone..' value= phone=!undefined ? phone : "")
+							span.symbol-input100span.focus-input100(data-placeholder='☏')
+							
+
+
+						.wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+							//- <input type="email" class="myInput input100" name="email" placeholder="Enter your email..">
+							input.myInput.input100(type='email' name='email' placeholder='Enter your email..' value= email =!undefined ? email : "")
+							span.symbol-input100span.focus-input100(data-placeholder='✉')
+          
+						.wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+							<input type="password" class="myInput input100" name="password" placeholder="Password..">
+							span.symbol-input100span.focus-input100(data-placeholder='₱')
+          
+						.wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+							<input type="password" class="myInput input100" name="confirmPassword" placeholder="Confirm Password..">
+							span.symbol-input100span.focus-input100(data-placeholder='₱')
+						.container-login100-form-btn
+							button.login100-form-btn
+								| Register
+					.text-center.p-t-90
+						a.txt1(href='/login')
+							| Login
+		#dropDownSelect1
+		script(src='js/main.js')
+		script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js' integrity='sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW' crossorigin='anonymous')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- doctype html
+//- head
+//-   title Admin Registration
+//-   meta(charset='UTF-8')
+//-   meta(name='viewport' content='width=device-width, initial-scale=1')
+//-   script(src='https://kit.fontawesome.com/e1391d7e22.js')
+//-   link(rel='icon' type='image/png' href='../static/images/icons/favicon.ico')
+//-   link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1' crossorigin='anonymous')
+//-   link(rel='stylesheet' type='text/css' href='../static/main.css')
+//-   link(rel="stylesheet" href="css/style.css") 
+//-   link(rel="stylesheet" href="css/responsive.css")
+//- body
+//-   nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.sticky-top
+//-     .container-fluid
+//-       a.navbar-brand(href='#')
+//-         img(src='../static/img/1.png' height='28' alt='NSS UIET logo')
+//-         |  NSS UIET
+//-       //- a.navbar-brand(href='#') NSS UIET
+//-       button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+//-         span.navbar-toggler-icon
+//-       #navbarSupportedContent.collapse.navbar-collapse
+//-         ul.navbar-nav.me-auto.mb-2.mb-lg-0
+//-           li.nav-item
+//-             a.nav-link(aria-current='page' href='/') 
+//-               b Home
+//-           li.nav-item
+//-             a.nav-link(href='/#events') 
+//-               b Events
+//-           li.nav-item
+//-             a.nav-link(href='/#team') 
+//-               b Team
+//-           li.nav-item
+//-             a.nav-link(href='/#about')
+//-               b About
+//-           li.nav-item
+//-             a.nav-link(href='/#contact') 
+//-               b Contact
+//-   .limiter
+//-     .container-login100
+//-       .wrap-login100
+//-         .login100-pic.js-tilt(data-tilt='')
+//-           img(src='../static/images/img-01.png' alt='IMG')
+//-         form(action= "/register", method= "post", class= "login100-form validate-form")
+//-           if err!=undefined
+//-             .alert.alert-danger.alert-dismissible.fade.show(role='alert')
+//-               strong=err
+//-               button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
+//-           span.login100-form-title
+//-             | Add New Admin
+
+//-           .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+//-             input.myInput.input100(type='text' name='name' placeholder='Enter your name..' value= name=!undefined ? name : "")
+
+//-             span.symbol-input100
+//-                 i.fa.fa-user-alt(aria-hidden='true')
+          
+//-           .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+//-             input.myInput.input100(type='phone' name='phone' placeholder='phone..' value= phone=!undefined ? phone : "")
+//-             span.symbol-input100
+//-               i.fa.fa-phone-alt(aria-hidden='true')
+
+
+//-           .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+//-             //- <input type="email" class="myInput input100" name="email" placeholder="Enter your email..">
+//-             input.myInput.input100(type='email' name='email' placeholder='Enter your email..' value= email =!undefined ? email : "")
+//-             span.symbol-input100
+//-               i.fa.fa-envelope(aria-hidden='true')
+          
+//-           .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+//-             <input type="password" class="myInput input100" name="password" placeholder="Password..">
+//-             span.symbol-input100
+//-               i.fa.fa-lock(aria-hidden='true')
+          
+//-           .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+//-             <input type="password" class="myInput input100" name="confirmPassword" placeholder="Confirm Password..">
+//-             span.symbol-input100
+//-               i.fa.fa-lock(aria-hidden='true')
+            
+//-           .container-login100-form-btn
+//-             button.login100-form-btn
+//-               | ADD
+            
+              
+//-   footer.footer100
+//-     p.text-footer100
+//-       | Copyright © - NSS UIET - All rights reserved
+//-       br
+//-       | Created by - Nitish Gupta
+//-   //- script(src="../static/js/resp.js")
+//-   script.
+//-     $('.js-tilt').tilt({
+//-     scale: 1.1
+//-     })
+//-   script(async='' src='https://www.googletagmanager.com/gtag/js?id=UA-23581568-13')
+//-   script.
+//-     window.dataLayer = window.dataLayer || [];
+//-     function gtag(){dataLayer.push(arguments);}
+//-     gtag('js', new Date());
+//-     gtag('config', 'UA-23581568-13');
+//-   script(src='js/main.js')
+//-   script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js' integrity='sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW' crossorigin='anonymous')

@@ -1,0 +1,71 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport' content='width=device-width, initial-scale=1.0')
+		meta(name='title' content='Messenger')
+		meta(name='description' content='Developed By Nitish Gupta')
+		// Open Graph / Facebook
+		meta(property='og:type' content='website')
+		meta(property='og:url' content='https://app4messenger.herokuapp.com/chat')
+		meta(property='og:title' content='Messenger')
+		meta(property='og:description' content='Developed By Nitish Gupta')
+		meta(property='og:image' content='https://logos-world.net/wp-content/uploads/2021/02/Facebook-Messenger-Logo-700x394.png')
+		// Twitter
+		meta(property='twitter:card' content='summary_large_image')
+		meta(property='twitter:url' content='https://app4messenger.herokuapp.com/chat')
+		meta(property='twitter:title' content='Messenger')
+		meta(property='twitter:description' content='Developed By Nitish Gupta')
+		meta(property='twitter:image' content='https://logos-world.net/wp-content/uploads/2021/02/Facebook-Messenger-Logo-700x394.png')
+		
+		link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css' integrity='sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=' crossorigin='anonymous')
+		link(rel='stylesheet' href='css/style.css')
+		title Messenger
+	body(style='background: white')
+		.chat-container
+			header.chat-header(style='background-color: #9152f8')
+				h1
+					i.fas.fa-smile
+					|  Messenger
+					
+
+				a.btn(href='/') Leave Room
+			main.chat-main
+				.chat-sidebar(style='background-color: #9152f8 ')
+					h3
+						i.fas.fa-comments
+						|  Room Link:
+						input#myInput(type='text' style="background-color: #9152f8; border:none; color:white;word-wrap: break-word;width: 100%;" value='https://app4messenger.herokuapp.com/chat'+roomname readonly='')
+						br
+						button(onclick='myFunction()' ) Copy
+					h3
+						i.fas.fa-comments
+						|  Room Name:
+					//- h2
+					//- 	| ee
+					h2#room-name
+					h3
+						i.fas.fa-users
+						|  Users
+					ul#users
+				.chat-messages
+			.chat-form-container(style='background-color: #9152f8 ')
+				form#chat-form
+					input#msg(type='text' placeholder='Enter Message' required='' autocomplete='off')
+					button.btn
+						i.fas.fa-paper-plane
+						|  Send
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js' integrity='sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4=' crossorigin='anonymous')
+		script.
+			const loginName = "#{username}";
+			const room_name = "#{roomname}";
+		script(src='/socket.io/socket.io.js')
+		script(src='/js/main.js')
+		script.
+			function myFunction() {
+			var copyText = document.getElementById("myInput");
+			copyText.select();
+			copyText.setSelectionRange(0, 99999)
+			document.execCommand("copy");
+			alert("Copied the text: " + copyText.value);
+			}
